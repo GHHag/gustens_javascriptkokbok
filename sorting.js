@@ -117,7 +117,8 @@ function simplifiedQuickSort(array) {
     let pivot = array[0];
     let left = array.filter(x => x < pivot);
     let right = array.filter(x => x > pivot);
-    return [...quickSort(left), pivot, ...quickSort(right)];
+
+    return [...simplifiedQuickSort(left), pivot, ...simplifiedQuickSort(right)];
 }
 
 
